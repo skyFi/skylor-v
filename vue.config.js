@@ -19,10 +19,10 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '/dbdoc': {
+      '/api': {
         target: config.get('api'),
         pathRewrite: {
-          '^/dbdoc': '',
+          '^/api': '',
         },
         changeOrigin: true,
       },

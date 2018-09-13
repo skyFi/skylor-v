@@ -1,6 +1,6 @@
 ---
 apps:
-  - name: smart-dbdoc
+  - name: skylor-vue-project
     script: index.js
     exec_mode: cluster
     instances: 1
@@ -16,9 +16,9 @@ apps:
 
 deploy:
   develop:
-    user: xxd
-    host: 172.17.7.72
+    user: skylor
+    host: 0.0.0.0
     ref: origin/master
-    repo: git@code.smartstudy.com:smart-liuxue/smart-dbdoc.git
-    path: /home/xxd/smart-dbdoc
+    repo: git@github.com:skyFi/skylor-v.git
+    path: /path/to/skylor-vue-project
     post-deploy: npm install && npm run build && pm2 startOrReload ecosystem.yaml --update-env --env development && echo 'OK'

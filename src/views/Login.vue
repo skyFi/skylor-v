@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>Smart DB Doc</h1>
-    <h3>v{{version}} <span class="copy-right">contact: &lt;fangyongle@innobuddy.com&gt;</span></h3>
+    <h1>Skylor Vue Project</h1>
+    <h3>v{{version}} <span class="copy-right">contact: &lt;qq:1292736382&gt;</span></h3>
     <div class="login-form-box">
       <input type="text" v-model="account" placeholder="手机号">
       <div class="captcha-box">
@@ -48,7 +48,7 @@ export default {
     },
     // 发送验证码
     async sendCaptcha() {
-      if (this.captchaGap === 0 && this.$leutil.isPhoneNum(this.account)) {
+      if (this.captchaGap === 0 && this.$le.isPhoneNum(this.account)) {
         await this.$axios.sendCaptcha(this.account);
         this.captchaGap = 10;
         this.subCaptchaGap();

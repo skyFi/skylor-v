@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 export default (Vue) => {
   // 1. 添加全局方法或属性
-  Vue.leutil = leutil;
+  Vue.le = leutil;
   Vue._ = _;
   //
   // // 2. 添加全局资源
@@ -21,6 +21,6 @@ export default (Vue) => {
   // });
   //
   // 4. 添加实例方法
-  Vue.prototype.$leutil = leutil;
+  Vue.prototype.$le = leutil;
   Vue.prototype.$_ = _;
 };

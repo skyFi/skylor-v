@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>这里是一个关于页面</h1>
-    <h5>需求投递：fangyongle@innobuddy.com</h5>
+    <h5>需求投递：qq:1292736382</h5>
     <div class="setting">
       <div class="api">API： </div>
       <input type="text" v-model="api" @keyup.enter="changeApi">

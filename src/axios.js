@@ -7,7 +7,7 @@ export default () => {
 
   const cacheBaseURL = localStorage.getItem('api');
   const instance = axios.create({
-    baseURL: cacheBaseURL || '/dbdoc',
+    baseURL: cacheBaseURL || '/api',
   });
   instance.defaults.headers.post['Content-Type'] = 'application/json';
 
@@ -15,7 +15,7 @@ export default () => {
   instance.interceptors.request.use((config) => {
     const ticket = localStorage.getItem('ticket');
     if (ticket) {
-      config.headers['X-smartsa-ticket'] = ticket;
+      config.headers['X-skylorvue-ticket'] = ticket;
     }
     return config;
   }, err => Promise.reject(err));
@@ -44,10 +44,6 @@ export default () => {
     // 登出
     logout() {
       return instance.post('/user/logout');
-    },
-    // 获取数据库结构数据
-    getTables(refresh) {
-      return instance.get('/util/tables/docs', { params: { refresh } });
     },
   };
 };

@@ -1,4 +1,3 @@
-// @server 服务器入口
 /* eslint-disable */
 'use strict';
 
@@ -10,10 +9,10 @@ const config = require('config');
 const app = express();
 app.use(express.static(path.join(__dirname, '../dist')));
 
-// 反向代理 dbdoc 接口服务
-app.use(`/dbdoc`, proxy({
+// 反向代理 api 接口服务
+app.use(`/api`, proxy({
   target: config.get('api'),
-  pathRewrite: {'^/dbdoc': ''},
+  pathRewrite: {'^/api': ''},
   changeOrigin: true,
 }));
 

@@ -9,14 +9,9 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect: '/tables',
+      redirect: '/about',
       component: Home,
       children: [
-        {
-          path: '/tables/:id?',
-          name: 'tables',
-          component: () => import(/* webpackChunkName: "tables" */ './views/Tables.vue'),
-        },
         {
           path: '/about',
           name: 'about',

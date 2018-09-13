@@ -2,7 +2,6 @@
   <div>
     <div id="nav">
       <router-link to="/about">About</router-link>
-      <router-link to="/tables">Tables</router-link>
       <div class="username">
         {{username}}，你好
         <icon class="logout" @click="logout" icon="sign-out-alt"></icon>
