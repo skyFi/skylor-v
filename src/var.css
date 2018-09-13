@@ -1,0 +1,23 @@
+:root {
+  --color-border: rgba(0, 0, 0, .25);
+  --color-border-2: rgba(0, 0, 0, .05);
+  --color-primary: rgba(61, 112, 242, 1);
+  --color-primary-1: rgba(61, 112, 242, .9);
+  --color-primary-2: rgba(61, 112, 242, .8);
+  --color-primary-3: rgba(61, 112, 242, .7);
+  --color-primary-4: rgba(61, 112, 242, .6);
+  --color-primary-5: rgba(61, 112, 242, .5);
+  --color-primary-6: rgba(61, 112, 242, .4);
+  --color-primary-7: rgba(61, 112, 242, .3);
+  --color-primary-8: rgba(61, 112, 242, .2);
+  --color-primary-9: rgba(61, 112, 242, .1);
+  --color-primary-10: rgba(61, 112, 242, .05);
+  --color-main: rgba(44, 62, 80, 1);
+  --color-minor: rgba(44, 62, 80, .45);
+  --color-patch: rgba(44, 62, 80, .65);
+  --color-error: #f5222d;
+  --color-success: #52c41a;
+  --color-tip: rgba(212, 107, 8, 1);
+  --color-tip-2: rgba(212, 107, 8, .5);
+  --color-keyword: #eb2f96;
+}

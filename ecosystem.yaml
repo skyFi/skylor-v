@@ -1,0 +1,24 @@
+---
+apps:
+  - name: smart-dbdoc
+    script: index.js
+    exec_mode: cluster
+    instances: 1
+    interpreter_args: --optimize_for_size
+    wait_ready: true
+    listen_timeout: 30000
+    args: ["--color"]
+    env:
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
+    interpreter_args: --optimize_for_size
+
+deploy:
+  develop:
+    user: xxd
+    host: 172.17.7.72
+    ref: origin/master
+    repo: git@code.smartstudy.com:smart-liuxue/smart-dbdoc.git
+    path: /home/xxd/smart-dbdoc
+    post-deploy: npm install && npm run build && pm2 startOrReload ecosystem.yaml --update-env --env development && echo 'OK'

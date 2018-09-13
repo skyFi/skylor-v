@@ -1,0 +1,38 @@
+{
+  "name": "db-doc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy-develop": "pm2 deploy ecosystem.yaml develop update"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/vue-fontawesome": "^0.1.1",
+    "axios": "^0.18.0",
+    "config": "^2.0.1",
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.18.0",
+    "leutil": "^1.0.2",
+    "lodash": "^4.17.10",
+    "npm": "^6.4.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vue-toasted": "^1.1.24",
+    "vue2-collapse": "^1.0.15",
+    "vuex": "^3.0.1",
+    "webpack": "^4.17.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0",
+    "@vue/cli-plugin-eslint": "^3.0.0",
+    "@vue/cli-service": "^3.0.0",
+    "@vue/eslint-config-airbnb": "^3.0.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
